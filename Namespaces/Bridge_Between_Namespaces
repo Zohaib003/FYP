@@ -1,0 +1,10 @@
+ 
+ sudo ip link add veth_f0 type veth peer name veth_f1
+ sudo ip link set veth_f0 netns f0
+ sudo ip link set veth_f1 netns f1
+ sudo ip netns exec f0 ip addr add 10.0.1.3/24 dev veth_f0
+ sudo ip netns exec f1 ip addr add 10.0.1.4/24 dev veth_f1
+ sudo ip -n f0 link set dev veth_f0 up
+ sudo ip -n f1 link set dev veth_f1 up
+ sudo ip netns exec f1 ip route add default via 10.0.1.4 dev veth_f1
+ echo done !
