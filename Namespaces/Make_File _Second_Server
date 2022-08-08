@@ -1,0 +1,13 @@
+115_2nd Server
+
+echo making f0
+sudo ip netns add f0
+sudo ip link set dev enp8s0f0 netns f0
+sudo ip -n f0 link set dev enp8s0f0 up
+sudo ip -n f0 address add 10.0.1.2/24 dev enp8s0f0
+echo making f1
+sudo ip netns add f1
+sudo ip link set dev enp8s0f1 netns f1
+sudo ip -n f1 link set dev enp8s0f1 up
+sudo ip -n f1 address add 10.0.2.2/24 dev enp8s0f1
+
