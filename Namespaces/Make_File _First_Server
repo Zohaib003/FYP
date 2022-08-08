@@ -10,3 +10,5 @@ sudo ip netns add f1
 sudo ip link set dev enp6s0f1 netns f1
 sudo ip -n f1 link set dev enp6s0f1 up
 sudo ip -n f1 address add 10.0.2.1/24 dev enp6s0f1
+
+// route command is in the read.me
