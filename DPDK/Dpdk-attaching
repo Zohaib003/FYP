@@ -1,0 +1,17 @@
+#!/bin/bash
+
+nic_driver=enp0s25       // write the name of your device      
+echo "device you chose is $nic_driver"
+ifconfig $nic_driver down
+modprobe uio 
+modprobe uio_pci_generic
+pci=00:19.0               // write the  pci number of your nic
+sudo dpdk-devbind.py -b uio_pci_generic $pci
+
+echo check status
+sudo -i
+mkdir -p /dev/hugepages
+mountpoint -q /dev/hugepages || mount -t hugetlbfs nodev /dev/hugepages
+echo 64 > /sys/devices/system/node/node0/hugepages/hugepages-2048kB/nr_hugepages
+exit
+echo "device suceesfully bound to dpdk"
