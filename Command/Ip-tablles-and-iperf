@@ -30,7 +30,6 @@ udo iperf3 -c 10.0.1.2 -u -b 42M -P 2 –length   42  “-u” for udp
 sudo iperf3 -c 10.0.1.2  --length 42 -u -P 32 -T 20
 
 
-when using 
-
+when using namespaces
 
 sudo ip net exec lin iperf3 -c 192.168.56.1 -p 3000
