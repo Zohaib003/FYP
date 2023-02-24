@@ -1,0 +1,36 @@
+
+
+IP TABLES     
+
+sudo watch --interval=1 'iptables -nvL | grep -v "0     0"'
+
+sudo iptables -A INPUT -s 10.0.1.2 -j DROP
+
+sudo iptables -A INPUT -m mac --mac-source 08:00:27:b3:66:44  -j DROP
+
+iptables -F
+
+
+sudo watch --interval=1 "iptables -nvL| grep -v"0  0""
+
+
+ for i in {1..50}; do sudo iptables -nvxL ;echo "==============================================================================\n===" ; sleep 1; done
+
+ sudo iptables -I INPUT -d 10.0.1.2 -p udp --dport 8080 -j DROP 
+
+
+
+
+Iperf  
+
+How to send parallel pckets at a same time and also length  
+
+udo iperf3 -c 10.0.1.2 -u -b 42M -P 2 –length   42  “-u” for udp  
+
+sudo iperf3 -c 10.0.1.2  --length 42 -u -P 32 -T 20
+
+
+when using 
+
+
+sudo ip net exec lin iperf3 -c 192.168.56.1 -p 3000
