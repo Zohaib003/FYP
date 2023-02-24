@@ -1,0 +1,25 @@
+                                   
+
+sudo ./dpdk-testpmd -l 0-3 -n 4 -- -i --portmask=0x1 --nb-cores=2 --total-num-mbufs=2048 --tx-ip=10.0.1.1,10.0.1.2 –eth-peer=0,08:00:27:b3:66:44
+
+Run this command after running script to attach dpdk  
+
+dpdk---→>>  build--→>>>app ---- >> run this command 
+
+sudo ./dpdk-testpmd -l 0-3 -n 4 -- --portmask=0x1 --nb-cores=2 --total-num-mbufs=2048 --tx-ip=10.0.1.1,10.0.1.2 --eth-peer=0,08:00:27:b3:66:44  --stats-period=1 --record-core-cycles --record-burst-stats --enable-drop-en -i 
+
+for lab pc
+
+--eth-peer=0,C8:5B:76:3E:F0:68
+
+
+after running in the interactive mode
+set burst 1
+set txpkts 100
+set fwd txonly 
+
+clear port stats all
+
+
+
+sudo dpdk-devbind.py -b e1000e 00:19.0
