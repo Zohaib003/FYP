@@ -1,0 +1,9 @@
+========To remove xdp program from device======= 
+sudo ip link set eno1 xdpgeneric off
+
+======= To run the xdp programs=====
+xdp-tutorial---> packet01-apna----->run make
+------run to attch xdp
+sudo ./xdp_loader --dev eno1 -A --progsec dropper_main
+------to show stats
+sudo ./xdp_stats -d eno1
