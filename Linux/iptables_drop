@@ -1,0 +1,5 @@
+#!/bin/bash
+sudo iptables -F
+sudo iptables -I INPUT -s 10.0.1.1 -p udp -j DROP
+echo "Iptables drop functionalitty added"
+sudo mpstat -u -I SUM -P 0,1,2,3,4,5 1 > kernel-drop-ipt.txt
