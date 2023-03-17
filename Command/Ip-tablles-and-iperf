@@ -8,16 +8,17 @@ sudo iptables -A INPUT -s 10.0.1.2 -j DROP
 
 sudo iptables -A INPUT -m mac --mac-source 08:00:27:b3:66:44  -j DROP
 
-iptables -F
-
-
 sudo watch --interval=1 "iptables -nvL| grep -v"0  0""
 
 
  for i in {1..50}; do sudo iptables -nvxL ;echo "==============================================================================\n===" ; sleep 1; done
 
  sudo iptables -I INPUT -d 10.0.1.2 -p udp --dport 8080 -j DROP 
+ 
+For Mid
 
+sudo iptables -I INPUT -d 10.0.1.2 -p udp  -j DROP 
+iptables -F
 
 
 
