@@ -26,6 +26,6 @@ for unbinding
 sudo dpdk-devbind.py -b e1000e 00:19.0
 
 
-sudo -i kar ka ya laikana
+sudo -i kar ka ya laikana taka 2sra driver add kar sakyain
 
 echo 1 > /sys/module/vfio/parameter/enabale_unsafe_noiommu_mode
