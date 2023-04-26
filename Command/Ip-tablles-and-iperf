@@ -20,7 +20,7 @@ For Mid
 sudo iptables -I INPUT -d 10.0.1.2 -p udp  -j DROP 
 iptables -F
 
-
+----  sudo ip route del 10.0.2.0 --- 
 
 Iperf  
 
