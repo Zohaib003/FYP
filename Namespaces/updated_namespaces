@@ -14,3 +14,8 @@ sudo ip link set dev enp1s0f1 netns f1
 sudo ip -n f1 link set dev enp1s0f1 up
 sudo ip -n f1 address add 10.0.2.1/24 dev enp1s0f1
 sudo ip netns exec f1 ip route add 10.0.1.0/24 via 10.0.2.2
+
+
+####  How to delete namespaces
+
+sudo ip netns del <name>
