@@ -8,3 +8,13 @@ sudo mpstat -I SUM -P 0,1,2,3 1
 === to check the both things 
 
 sudo mpstat -u -I SUM -P 0,1,2,3 1
+
+<<<<<<<<<<<<<<<<<<<<<< How to connect with rempte pc under same network >>>>>>>>>>>>>>>>
+--> install open ssh on the server == sudo apt-get install opensssh-server
+--> start ssh server at host == sudo service ssh start
+--> check the status at host == sudo service ssh status
+
+from client
+
+--- simply run the command---> ssh <<server_pc username>>@<<server ip>> 
+---- enter the password << server loginpassword>>
