@@ -1,0 +1,7 @@
+====>  Dowonload the trex from the github
+
+=====>   GO TO trex folder run this commmand    
+sudo ./t-rex-64 -f cap2/imix_64_100k.yaml -c 4  -d 100 -m 1000
+
+====>     To edit the trex config file ( to set ips and mac addresses) 
+sudo nano /etc/trex_cfg.yaml 
